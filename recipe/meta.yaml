@@ -1,4 +1,4 @@
-{% set version = '0.4.0' %}
+{% set version = "0.5.0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/viridis_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/viridis/viridis_{{ version }}.tar.gz
-  sha256: 93d2ded68ed7cec5633c260dbc47051416147aae074f29ebe135cc329250b00e
+  sha256: fea477172c1e11be40554545260b36d6ddff3fe6bc3bbed87813ffb77c5546cd
 
 build:
   number: 0
