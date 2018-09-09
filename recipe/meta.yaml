@@ -10,23 +10,28 @@ package:
 source:
   fn: viridis_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/viridis_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/viridis/viridis_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/viridis_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/viridis/viridis_{{ version }}.tar.gz
   sha256: ddf267515838c6eb092938133035cee62ab6a78760413bfc28b8256165701918
 
 build:
-  number: 0
-  skip: true  # [win32]
+  merge_build_host: True  # [win]
+  number: 1
+
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+
+  host:
     - r-base
     - r-ggplot2 >=1.0.1
     - r-gridextra
     - r-viridislite >=0.3.0
+
   run:
     - r-base
     - r-ggplot2 >=1.0.1
@@ -35,7 +40,7 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('viridis')"  # [not win]
+    - $R -e "library('viridis')"           # [not win]
     - "\"%R%\" -e \"library('viridis')\""  # [win]
 
 about:
@@ -49,9 +54,15 @@ about:
     converted to black-and-white. They are also designed to be perceived by readers
     with the most common form of color blindness.
   license_family: MIT
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\MIT'  # [win]
 
 extra:
   recipe-maintainers:
     - johanneskoester
     - bgruening
+    - daler
+    - jdblischak
+    - cbrueffer
+    - dbast
     - roryk
