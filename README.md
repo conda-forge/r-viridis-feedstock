@@ -7,13 +7,7 @@ Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: Port of the new matplotlib color maps ('viridis' - the default -, 'magma', 'plasma'
-and 'inferno') to R. matplotlib is a popular plotting
-library for python. These color maps are designed in such a way that they will
-analytically be perfectly perceptually-uniform, both in regular form and also when
-converted to black-and-white. They are also designed to be perceived by readers
-with the most common form of color blindness.
-
+Summary: Implementation of the 'viridis' - the default -, 'magma', 'plasma',  'inferno', and 'cividis' color maps for 'R'. 'viridis', 'magma', 'plasma',  and 'inferno' are ported from 'matplotlib' <http://matplotlib.org/>, a  popular plotting library for 'python'. 'cividis', was developed by Jamie R.  Nuñez and Sean M. Colby. These color maps are designed in such a way that  they will analytically be perfectly perceptually-uniform, both in regular  form and also when converted to black-and-white. They are also designed to  be perceived by readers with the most common form of color blindness (all  color maps in this package) and color vision deficiency ('cividis' only). 
 
 
 
@@ -122,12 +116,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bgruening](https://github.com/bgruening/)
-* [@cbrueffer](https://github.com/cbrueffer/)
 * [@conda-forge/r](https://github.com/conda-forge/r/)
-* [@daler](https://github.com/daler/)
-* [@dbast](https://github.com/dbast/)
-* [@jdblischak](https://github.com/jdblischak/)
-* [@johanneskoester](https://github.com/johanneskoester/)
 * [@roryk](https://github.com/roryk/)
 
