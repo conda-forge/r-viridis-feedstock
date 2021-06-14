@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -27,12 +27,12 @@ requirements:
     - r-base
     - r-ggplot2 >=1.0.1
     - r-gridextra
-    - r-viridislite >=0.3.0
+    - r-viridislite >=0.4.0
   run:
     - r-base
     - r-ggplot2 >=1.0.1
     - r-gridextra
-    - r-viridislite >=0.3.0
+    - r-viridislite >=0.4.0
 
 test:
   commands:
