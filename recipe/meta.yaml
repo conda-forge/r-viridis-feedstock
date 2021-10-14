@@ -1,4 +1,4 @@
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/viridis_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/viridis/viridis_{{ version }}.tar.gz
-  sha256: 48044c8aa7f24a349a10a853f2dc1e60e363f0456567d82dbb3e4ae6cde8cabb
+  sha256: 69b58cd1d992710a08b0b227fd0a9590430eea3ed4858099412f910617e41311
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
