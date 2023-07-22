@@ -1,4 +1,4 @@
-{% set version = "0.6.3" %}
+{% set version = "0.6.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/viridis_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/viridis/viridis_{{ version }}.tar.gz
-  sha256: 4a60b79745997219601a0cd1d85bc5eb8a9840ed732b06ef539dd33e1c7f1ffc
+  sha256: 0ba2a88bc38ff8be4d074ed2bc17fd9d746e96ed4dec03fa079d96a06541d6dc
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -42,9 +42,9 @@ test:
 about:
   home: https://github.com/sjmgarnier/viridis
   license: MIT
-  summary: "Implementation of the 'viridis' - the default -, 'magma', 'plasma',  'inferno', and 'cividis' color maps for 'R'. 'viridis', 'magma', 'plasma',  and 'inferno' are ported from 'matplotlib' <http://matplotlib.org/>, a  popular plotting library for 'python'. 'cividis', was developed by Jamie R.  Nuñez and Sean M.\
-    \ Colby. These color maps are designed in such a way that  they will analytically be perfectly perceptually-uniform, both in regular  form and also when converted to black-and-white. They are also designed to  be perceived by readers with the most common form of color blindness (all  color maps in this package) and color\
-    \ vision deficiency ('cividis' only). "
+  summary: "Implementation of the 'viridis' - the default -, 'magma', 'plasma',  'inferno', and 'cividis' color maps for 'R'. 'viridis', 'magma', 'plasma',  and 'inferno' are ported from 'matplotlib' <http://matplotlib.org/>, a  popular plotting library for 'python'. 'cividis', was developed by Jamie R.  Nuñez and Sean M.
+    Colby. These color maps are designed in such a way that  they will analytically be perfectly perceptually-uniform, both in regular  form and also when converted to black-and-white. They are also designed to  be perceived by readers with the most common form of color blindness (all  color maps in this package) and color
+    vision deficiency ('cividis' only). "
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
