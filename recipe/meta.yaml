@@ -1,6 +1,5 @@
 {% set version = "0.6.5" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-viridis
@@ -13,8 +12,7 @@ source:
   sha256: 862b5cb6be115deea0207cdd3c8bb33de28552cfdc29900777512fd488d0005c
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
